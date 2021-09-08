@@ -12,7 +12,7 @@ const user = process.env.DB_USER || "udjmetxswhgojqea";
 const password = process.env.DB_PASSWORD || "KuuHBjvOwsJdOkiIu1S3";
 const host =
   process.env.HOST || "bjlcwrkvhgrmtsyqmx5h-mysql.services.clever-cloud.com";
-const port = 4000;
+const port = process.env.PORT || 8080 || 4000;
 const database = process.env.DB_NAME || "bjlcwrkvhgrmtsyqmx5h";
 export const db = createConnection({
   user,
